@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CampusEvents – College Event Registration Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 CampusEvents</h1>
+  <p>Discover and register for college events</p>
+</header>
+
+<main>
+  <div class="tools">
+    <input id="search" placeholder="Search events…" aria-label="Search events">
+    <select id="cat" aria-label="Category">
+      <option value="All">All categories</option>
+      <option>Technical</option>
+      <option>Cultural</option>
+      <option>Sports</option>
+      <option>Workshop</option>
+    </select>
+  </div>
+  <div id="events" class="grid"></div>
+  <h2>My Registrations</h2>
+  <div id="regs"></div>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div id="formView">
+      <h3 id="mTitle">Register</h3>
+      <label>Full name</label><input id="name"><div class="err" id="eName"></div>
+      <label>Register number</label><input id="regno"><div class="err" id="eReg"></div>
+      <label>Email</label><input id="email" type="email"><div class="err" id="eMail"></div>
+      <label>Department</label>
+      <select id="dept">
+        <option>BCA</option>
+        <option>BSc CS</option>
+        <option>B.Com</option>
+        <option>BBA</option>
+        <option>Other</option>
+      </select>
+      <label>Phone</label><input id="phone" inputmode="numeric"><div class="err" id="ePhone"></div>
+      <div class="row">
+        <button class="ghost" id="cancel">Cancel</button>
+        <button id="submit">Confirm</button>
+      </div>
+    </div>
+
+    <div id="doneView" style="display:none">
+      <h3 class="ok">✅ Registration successful!</h3>
+      <p id="doneMsg"></p>
+      <div class="row"><button id="close">Done</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ Registration Successful!</div>
+<footer>CampusEvents · FWD Hackathon Project</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
